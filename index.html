@@ -1,182 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Doman Sahu | Data Analyst & Automation Expert</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doman Sahu - Interactive Resume Portfolio</title>
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Animation Config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          animation: {
-            fade: "fadeIn 1s ease-in-out",
-            slide: "slideUp 0.8s ease-out",
-            bounceSlow: "bounce 3s infinite"
-          },
-          keyframes: {
-            fadeIn: {
-              "0%": { opacity: 0 },
-              "100%": { opacity: 1 }
-            },
-            slideUp: {
-              "0%": { transform: "translateY(30px)", opacity: 0 },
-              "100%": { transform: "translateY(0)", opacity: 1 }
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 scroll-smooth">
+<body class="bg-gray-100 text-gray-900">
 
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-white shadow z-50">
-  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between">
-    <span class="font-bold text-indigo-600">Doman Sahu</span>
-    <div class="space-x-6 text-sm font-medium">
-      <a href="#about" class="hover:text-indigo-600">About</a>
-      <a href="#experience" class="hover:text-indigo-600">Experience</a>
-      <a href="#skills" class="hover:text-indigo-600">Skills</a>
-      <a href="#projects" class="hover:text-indigo-600">Projects</a>
-    </div>
-  </div>
-</nav>
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-10 shadow-lg">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-4xl font-bold">Doman Sahu</h1>
+      <p class="text-xl mt-2 font-light">Data Analyst & ERP Specialist</p>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-  <div class="text-center animate-fade">
-    <h1 class="text-5xl font-bold mb-4">Doman Sahu</h1>
-    <p class="text-xl mb-6">Data Analyst • ERP Specialist • Automation Architect</p>
-    <p class="text-sm opacity-90">Transforming manual operations into smart systems</p>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="max-w-7xl mx-auto px-6 py-16 animate-slide">
-  <h2 class="text-3xl font-bold mb-6 border-b pb-2">About Me</h2>
-  <p class="leading-relaxed">
-    I specialize in designing automation-first systems using Google Sheets,
-    Apps Script, ERP platforms, Power BI, Looker Studio, and APIs.  
-    With hands-on experience across procurement, HRMS, finance, and project
-    management workflows, I focus on efficiency, scalability, and real-time
-    decision-making.
-  </p>
-</section>
-
-<!-- STATS -->
-<section class="bg-white py-12">
-  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-6">
-    <div>
-      <h3 class="text-4xl font-bold text-indigo-600">7+</h3>
-      <p class="text-sm">Years Experience</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-indigo-600">20+</h3>
-      <p class="text-sm">Automation Systems</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-indigo-600">10+</h3>
-      <p class="text-sm">ERP Implementations</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-indigo-600">1000+</h3>
-      <p class="text-sm">Hours Saved</p>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE TIMELINE -->
-<section id="experience" class="max-w-7xl mx-auto px-6 py-16">
-  <h2 class="text-3xl font-bold mb-8 border-b pb-2">Experience</h2>
-
-  <div class="border-l-4 border-indigo-600 space-y-8 pl-6">
-    <div>
-      <h3 class="font-semibold">Data Analyst – 9M India Ltd.</h3>
-      <p class="text-sm text-gray-500">Feb 2025 – Present</p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold">Data Analyst – RSA Infraproject Pvt. Ltd.</h3>
-      <p class="text-sm text-gray-500">Oct 2022 – Feb 2025</p>
-    </div>
-
-    <div>
-      <h3 class="font-semibold">Data Management Executive – Shree Vasu Logistics</h3>
-      <p class="text-sm text-gray-500">Aug 2020 – Sept 2022</p>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="bg-gray-50 py-16">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-8 border-b pb-2">Skills</h2>
-
-    <div class="space-y-4">
-      <div>
-        <p class="text-sm font-semibold">Google Sheets & Apps Script</p>
-        <div class="w-full bg-gray-200 rounded">
-          <div class="bg-indigo-600 h-2 rounded w-[95%]"></div>
-        </div>
+      <div class="flex gap-6 mt-4 text-lg">
+        <a href="tel:8827462871" class="hover:text-yellow-300"><i class="fa-solid fa-phone"></i> 8827462871</a>
+        <a href="tel:8770603362" class="hover:text-yellow-300"><i class="fa-solid fa-phone"></i> 8770603362</a>
+        <a href="mailto:doman.developer@gmail.com" class="hover:text-yellow-300"><i class="fa-solid fa-envelope"></i> doman.developer@gmail.com</a>
       </div>
 
-      <div>
-        <p class="text-sm font-semibold">ERP Implementation</p>
-        <div class="w-full bg-gray-200 rounded">
-          <div class="bg-indigo-600 h-2 rounded w-[90%]"></div>
+      <p class="mt-3"><i class="fa-solid fa-location-dot"></i> Bitkuli, Post–Chandanu, Tah.–Bemetara, Distt. Bemetara (C.G.) 491335</p>
+
+      <nav class="mt-6 flex gap-4 text-sm">
+        <a href="#education" class="bg-white text-indigo-600 px-3 py-1 rounded-md shadow hover:bg-gray-200">Education</a>
+        <a href="#skills" class="bg-white text-indigo-600 px-3 py-1 rounded-md shadow hover:bg-gray-200">Skills</a>
+        <a href="#experience" class="bg-white text-indigo-600 px-3 py-1 rounded-md shadow hover:bg-gray-200">Experience</a>
+        <a href="#projects" class="bg-white text-indigo-600 px-3 py-1 rounded-md shadow hover:bg-gray-200">Projects</a>
+        <a href="#personal" class="bg-white text-indigo-600 px-3 py-1 rounded-md shadow hover:bg-gray-200">Personal Details</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Education -->
+    <section id="education">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-graduation-cap text-indigo-600"></i> Education
+      </h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>M.Sc. (IT) – 69%</li>
+        <li>Bachelor of Computer Applications – 70%</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-lightbulb text-indigo-600"></i> Skills
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <span class="bg-white shadow p-3 rounded-md text-center">Teamwork</span>
+        <span class="bg-white shadow p-3 rounded-md text-center">Creativity</span>
+        <span class="bg-white shadow p-3 rounded-md text-center">Responsibility</span>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-briefcase text-indigo-600"></i> Work Experience
+      </h2>
+
+      <div class="space-y-6">
+
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="text-xl font-semibold">9M India Ltd., Raipur, C.G — Data Analyst</h3>
+          <p class="text-sm text-gray-600">Feb 2025 – Present</p>
         </div>
+
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="text-xl font-semibold">RSA Infraproject Pvt. Ltd., Raipur, C.G — Data Analyst</h3>
+          <p class="text-sm text-gray-600">Oct 2022 – Feb 2025</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="text-xl font-semibold">Shree Vasu Logistics Ltd., Raipur, C.G — Data Management Executive (ERP / Sheets)</h3>
+          <p class="text-sm text-gray-600">Aug 2020 – Sept 2022</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="text-xl font-semibold">Margdarshak Financial Services Ltd., Raipur, C.G — MIS Head</h3>
+          <p class="text-sm text-gray-600">Dec 2019 – Jul 2020</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow">
+          <h3 class="text-xl font-semibold">Surya Wires Pvt. Ltd., Raipur, C.G — MIS Executive</h3>
+          <p class="text-sm text-gray-600">Nov 2017 – Nov 2019</p>
+        </div>
+
       </div>
 
-      <div>
-        <p class="text-sm font-semibold">Power BI / Looker Studio</p>
-        <div class="w-full bg-gray-200 rounded">
-          <div class="bg-indigo-600 h-2 rounded w-[88%]"></div>
-        </div>
-      </div>
+      <h3 class="text-2xl font-semibold mt-8">Key Responsibilities</h3>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Automation and dashboards using Google Apps Script, Data Studio, SMS/email/WhatsApp API.</li>
+        <li>Dashboard development (Google Sheets, Power BI, Looker Studio).</li>
+        <li>Workflow optimization for Procurement, HRMS, FMS/PMS.</li>
+        <li>KRA/KPI scoring systems and task/ delegation tools.</li>
+        <li>End-to-end ERP implementation & training.</li>
+        <li>ERP configuration, troubleshooting, and vendor coordination.</li>
+        <li>Data integrity, compliance, reporting, and custom dashboards.</li>
+        <li>Business process optimization and automation.</li>
+      </ul>
+    </section>
 
-      <div>
-        <p class="text-sm font-semibold">Web & API Development</p>
-        <div class="w-full bg-gray-200 rounded">
-          <div class="bg-indigo-600 h-2 rounded w-[85%]"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- IT Proficiency -->
+    <section id="it-prof">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-computer text-indigo-600"></i> IT Proficiency
+      </h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Servers: Linux/Ubuntu, Windows Server</li>
+        <li>ERP Modules: Purchase, Sales, Inventory, Project, CRM, Finance, HR</li>
+        <li>ERP Software: PharmaCloud, CBO ERP, ERPNext, Nway, i-BOSS</li>
+        <li>AI & APIs: ChatGPT API, Chatbot Development, WhatsApp API, Chatbase</li>
+        <li>Web Dev: HTML, CSS, PHP, MySQLi, TailwindCSS, hosting</li>
+        <li>Programming: Node.js, Python</li>
+        <li>Containerization: Docker (basic)</li>
+        <li>Databases: Firebase/Realtime DB</li>
+        <li>Google Suite: Sheets, Forms, Slides, Data Studio + Apps Script</li>
+        <li>Excel/Sheets: QUERY, ARRAYFORMULA, VLOOKUP, INDEX/MATCH, etc.</li>
+      </ul>
+    </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="max-w-7xl mx-auto px-6 py-16">
-  <h2 class="text-3xl font-bold mb-8 border-b pb-2">Key Projects</h2>
+    <!-- Certifications -->
+    <section id="certs">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-certificate text-indigo-600"></i> Certifications
+      </h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Business Analysis & Process Management – Coursera (Feb 2025)</li>
+        <li>Python for Data Science – Great Learning (Sept 2024)</li>
+        <li>SQL for Data Science – Great Learning (Sept 2024)</li>
+      </ul>
+    </section>
 
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="bg-white p-6 rounded shadow hover:scale-105 transition">
-      <h3 class="font-semibold mb-2">Tally → Google Sheet Sync</h3>
-      <p class="text-sm">Automated accounting data pipeline.</p>
-    </div>
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-diagram-project text-indigo-600"></i> Projects
+      </h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li>Tally-to-Google Sheet Sync automation</li>
+        <li>Unofficial WhatsApp API for automation</li>
+        <li>Employee Training & Evaluation System</li>
+        <li>QR Token System</li>
+      </ul>
+    </section>
 
-    <div class="bg-white p-6 rounded shadow hover:scale-105 transition">
-      <h3 class="font-semibold mb-2">WhatsApp API Automation</h3>
-      <p class="text-sm">Alerts, approvals & tracking system.</p>
-    </div>
+    <!-- Personal -->
+    <section id="personal">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-user text-indigo-600"></i> Personal Details
+      </h2>
 
-    <div class="bg-white p-6 rounded shadow hover:scale-105 transition">
-      <h3 class="font-semibold mb-2">ERP Dashboards</h3>
-      <p class="text-sm">Real-time KPI, KRA & MIS reporting.</p>
-    </div>
-  </div>
-</section>
+      <p><strong>Father’s Name:</strong> Late Santosh Sahu</p>
+      <p><strong>Mother’s Name:</strong> Ms. Gayatri Sahu</p>
+      <p><strong>Languages Known:</strong> Hindi, English</p>
+      <p><strong>Hobbies:</strong> Web Designing, Software Development, Internet Surfing, Traveling, Hanging with Friends, Vocabulary Building.</p>
+    </section>
 
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-white text-center py-6 text-sm">
-  © 2025 Doman Sahu | Data Analyst & Automation Specialist
-</footer>
+  </main>
+
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>© 2025 Doman Sahu — Interactive Resume Portfolio</p>
+  </footer>
 
 </body>
 </html>
