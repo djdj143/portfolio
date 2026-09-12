@@ -52,6 +52,30 @@ body{background:#07130c}
 .price-card{transition:all .35s ease}.price-card:hover{transform:translateY(-8px);border-color:rgba(57,255,136,.45);box-shadow:0 20px 60px rgba(57,255,136,.07)}
 /* Google Form */
 @media(max-width:640px){#contact iframe{height:1100px}}
+
+/* Enquiry modal */
+#enquiryModalPanel {
+    animation: modalIn .25s ease-out;
+}
+@keyframes modalIn {
+    from { opacity:0; transform:translateY(16px) scale(.98); }
+    to { opacity:1; transform:translateY(0) scale(1); }
+}
+@media (max-width:640px) {
+    #enquiryModal { padding:0; }
+    #enquiryModalPanel {
+        max-height:100vh;
+        height:100vh;
+        border-radius:0;
+    }
+    #enquiryModalPanel > div:last-child {
+        height:calc(100vh - 64px) !important;
+    }
+    #enquiryModal iframe {
+        height:1250px;
+    }
+}
+
 </style>
 </head>
 
@@ -114,13 +138,13 @@ I build modern websites, web applications and business automation systems that h
 </p>
 
 <div class="mt-9 flex flex-wrap gap-4">
-<a href="#contact" class="group px-6 py-4 rounded-xl bg-neon text-dark font-semibold hover:-translate-y-1 hover:shadow-[0_15px_50px_rgba(57,255,136,.25)] transition">Start a Project <span class="inline-block ml-2 group-hover:translate-x-1 transition">→</span></a>
+<button onclick="openEnquiryModal('General Project Enquiry')" class="group px-6 py-4 rounded-xl bg-neon text-dark font-semibold hover:-translate-y-1 hover:shadow-[0_15px_50px_rgba(57,255,136,.25)] transition">Start a Project <span class="inline-block ml-2 group-hover:translate-x-1 transition">→</span></button>
 <a href="#projects" class="px-6 py-4 rounded-xl border border-white/10 text-gray-200 hover:border-neon/50 hover:text-neon transition">View My Work</a>
 </div>
 <div class="mt-5 flex flex-wrap gap-2">
-<a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%0A%0AI%20need%20help%20with%3A%20Website%20Development%0A%0AMy%20business%3A%20__________________%0A%0APlease%20share%20details%20and%20quotation." target="_blank" class="px-4 py-2.5 rounded-full border border-neon/20 bg-neon/5 text-neon text-xs font-semibold hover:bg-neon hover:text-dark transition">Need a Website? Get Quote →</a>
-<a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%0A%0AI%20need%20help%20with%3A%20Business%20Automation%0A%0AMy%20business%3A%20__________________%0A%0APlease%20share%20details%20and%20quotation." target="_blank" class="px-4 py-2.5 rounded-full border border-neon/20 bg-neon/5 text-neon text-xs font-semibold hover:bg-neon hover:text-dark transition">Want to Automate Your Business? →</a>
-<a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%0A%0AI%20need%20help%20with%3A%20Free%2015-Min%20Consultation%0A%0AMy%20business%3A%20__________________%0A%0APlease%20share%20details%20and%20quotation." target="_blank" class="px-4 py-2.5 rounded-full border border-white/10 text-gray-300 text-xs font-semibold hover:border-neon/40 hover:text-neon transition">Get Free 15-Min Consultation →</a>
+<button onclick="openEnquiryModal('Website Development')" class="px-4 py-2.5 rounded-full border border-neon/20 bg-neon/5 text-neon text-xs font-semibold hover:bg-neon hover:text-dark transition">Need a Website? Get Quote →</button>
+<button onclick="openEnquiryModal('Business Automation')" class="px-4 py-2.5 rounded-full border border-neon/20 bg-neon/5 text-neon text-xs font-semibold hover:bg-neon hover:text-dark transition">Want to Automate Your Business? →</button>
+<button onclick="openEnquiryModal('Free 15-Min Consultation')" class="px-4 py-2.5 rounded-full border border-white/10 text-gray-300 text-xs font-semibold hover:border-neon/40 hover:text-neon transition">Get Free 15-Min Consultation →</button>
 </div>
 
 
@@ -235,7 +259,7 @@ I build modern websites, web applications and business automation systems that h
 </div>
 <div class="flex flex-wrap gap-3">
 <a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%0A%0AI%20need%20help%20with%3A%20__________________%0A%0AMy%20business%3A%20__________________%0A%0APlease%20share%20details%20and%20quotation." target="_blank" class="px-5 py-3 rounded-xl bg-neon text-dark font-semibold hover:-translate-y-1 transition">Get Enquiry on WhatsApp →</a>
-<a href="#contact" class="px-5 py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Fill Enquiry Form</a>
+<button onclick="openEnquiryModal('General Project Enquiry')" class="px-5 py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Fill Enquiry Form</button>
 </div>
 </div>
 </div>
@@ -259,7 +283,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Responsive website</li><li>✓ Up to 5 pages</li><li>✓ Contact / WhatsApp CTA</li><li>✓ Basic SEO setup</li><li>✓ Mobile optimized</li>
 </ul>
-<a href="#contact" class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Get Started</a>
+<button onclick="openEnquiryModal(\'Starter Website\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Get Started</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal relative overflow-hidden">
@@ -271,7 +295,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Premium responsive design</li><li>✓ Up to 10 pages</li><li>✓ Lead generation sections</li><li>✓ WhatsApp integration</li><li>✓ SEO & performance setup</li>
 </ul>
-<a href="#contact" class="mt-7 inline-flex w-full justify-center py-3 rounded-xl bg-neon text-dark font-semibold hover:shadow-[0_10px_40px_rgba(57,255,136,.2)] transition">Choose Business</a>
+<button onclick="openEnquiryModal(\'Business Website\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl bg-neon text-dark font-semibold hover:shadow-[0_10px_40px_rgba(57,255,136,.2)] transition">Choose Business</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -282,7 +306,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Workflow analysis</li><li>✓ Google Sheets / Apps Script</li><li>✓ API integration</li><li>✓ Automated reports</li><li>✓ Notifications / WhatsApp</li>
 </ul>
-<a href="#contact" class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Automation</a>
+<button onclick="openEnquiryModal(\'Business Automation\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Automation</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -293,7 +317,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Custom UI / UX</li><li>✓ User management</li><li>✓ Database integration</li><li>✓ Admin dashboard</li><li>✓ API / third-party integration</li>
 </ul>
-<a href="#contact" class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</a>
+<button onclick="openEnquiryModal(\'Custom Web Application\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -304,7 +328,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Requirement analysis</li><li>✓ Custom modules</li><li>✓ Database architecture</li><li>✓ Reports & dashboards</li><li>✓ Deployment & support</li>
 </ul>
-<a href="#contact" class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Your System</a>
+<button onclick="openEnquiryModal(\'ERP / Business Software\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Your System</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -315,7 +339,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Android application</li><li>✓ Flutter / Kotlin</li><li>✓ Backend integration</li><li>✓ API connectivity</li><li>✓ Deployment support</li>
 </ul>
-<a href="#contact" class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</a>
+<button onclick="openEnquiryModal(\'Custom Web Application\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</button>
 </div>
 
 </div>
@@ -429,21 +453,112 @@ I build modern websites, web applications and business automation systems that h
 
 <section id="contact" class="py-28">
 <div class="max-w-7xl mx-auto px-5 sm:px-8">
-<div class="grid lg:grid-cols-2 gap-14 items-start">
-<div class="reveal lg:sticky lg:top-28">
-<div class="text-neon uppercase tracking-[.3em] text-xs font-semibold">Start a Project</div>
-<h2 class="mt-5 font-display text-5xl sm:text-6xl font-bold">Tell me about <span class="text-gray-500">your requirement.</span></h2>
-<p class="mt-6 text-gray-400 leading-8 max-w-lg">Need a website, automation, dashboard, mobile app or custom software? Fill out the enquiry form and I’ll get back to you.</p>
-<div class="mt-8 space-y-4">
-<a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%0A%0AI%20need%20help%20with%3A%20__________________%0A%0AMy%20business%3A%20__________________%0A%0APlease%20share%20details%20and%20quotation." target="_blank" class="glass rounded-2xl p-5 flex items-center gap-4 hover:border-neon/40 transition"><span class="material-symbols-outlined text-neon text-3xl">chat</span><div><div class="text-xs text-gray-600 uppercase">WhatsApp</div><div class="mt-1 text-sm">+91 88274 62871</div></div></a>
-<a href="mailto:doman.developer@gmail.com" class="glass rounded-2xl p-5 flex items-center gap-4 hover:border-neon/40 transition"><span class="material-symbols-outlined text-neon text-3xl">mail</span><div><div class="text-xs text-gray-600 uppercase">Email</div><div class="mt-1 text-sm break-all">doman.developer@gmail.com</div></div></a>
-</div></div>
-<div class="glass rounded-[28px] p-3 sm:p-5 reveal"><div class="rounded-2xl overflow-hidden bg-white">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfn6CHoQ14CD0fRsYW8QSiDWZ3LbIXkZPVi1pv_KJaqvKqc5A/viewform?embedded=true" width="100%" height="1050" frameborder="0" marginheight="0" marginwidth="0" title="Doman Sahu Enquiry Form" style="display:block;border:0;">Loading…</iframe>
-</div></div>
-</div></div></section>
+<div class="grid lg:grid-cols-2 gap-14 items-center">
+
+<div class="reveal">
+<div class="text-neon uppercase tracking-[.3em] text-xs font-semibold">Contact</div>
+<h2 class="mt-5 font-display text-5xl sm:text-6xl font-bold">
+Let's talk about <span class="text-gray-500">your project.</span>
+</h2>
+<p class="mt-6 text-gray-400 leading-8 max-w-lg">
+Need a website, automation, dashboard, mobile app or custom software?
+Open the enquiry form and tell me what you need.
+</p>
+
+<div class="mt-8 flex flex-wrap gap-3">
+<button onclick="openEnquiryModal('General Project Enquiry')"
+class="px-6 py-4 rounded-xl bg-neon text-dark font-semibold hover:-translate-y-1 transition">
+Start Your Project →
+</button>
+
+<a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%0A%0AI%20need%20help%20with%3A%20__________________%0A%0AMy%20business%3A%20__________________%0A%0APlease%20share%20details%20and%20quotation."
+target="_blank"
+class="px-6 py-4 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">
+WhatsApp Me
+</a>
+</div>
+</div>
+
+<div class="grid sm:grid-cols-2 gap-4 reveal">
+
+<a href="mailto:doman.developer@gmail.com"
+class="glass rounded-3xl p-7 hover:border-neon/40 transition">
+<span class="material-symbols-outlined text-neon text-3xl">mail</span>
+<div class="mt-6 text-xs text-gray-600">EMAIL</div>
+<div class="mt-2 text-sm break-all">doman.developer@gmail.com</div>
+</a>
+
+<a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20found%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%0A%0AI%20need%20help%20with%3A%20__________________%0A%0AMy%20business%3A%20__________________%0A%0APlease%20share%20details%20and%20quotation."
+target="_blank"
+class="glass rounded-3xl p-7 hover:border-neon/40 transition">
+<span class="material-symbols-outlined text-neon text-3xl">chat</span>
+<div class="mt-6 text-xs text-gray-600">WHATSAPP</div>
+<div class="mt-2">+91 88274 62871</div>
+</a>
+
+<a href="https://domansahu.in"
+class="glass rounded-3xl p-7 hover:border-neon/40 transition">
+<span class="material-symbols-outlined text-neon text-3xl">language</span>
+<div class="mt-6 text-xs text-gray-600">WEBSITE</div>
+<div class="mt-2 text-neon">domansahu.in</div>
+</a>
+
+<div class="glass rounded-3xl p-7 hover:border-neon/40 transition">
+<span class="material-symbols-outlined text-neon text-3xl">location_on</span>
+<div class="mt-6 text-xs text-gray-600">LOCATION</div>
+<div class="mt-2">Chhattisgarh, India</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
 
 </main>
+
+
+<!-- =========================================================
+     ENQUIRY MODAL
+========================================================= -->
+<div id="enquiryModal"
+     class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/80 backdrop-blur-md p-3 sm:p-5">
+
+    <div id="enquiryModalPanel"
+         class="relative w-full max-w-3xl max-h-[94vh] rounded-[28px] bg-white shadow-2xl overflow-hidden">
+
+        <div class="h-16 px-5 flex items-center justify-between bg-dark text-white border-b border-neon/10">
+
+            <div>
+                <div class="font-display font-bold text-lg">Start Your Project</div>
+                <div id="enquiryContext" class="text-xs text-gray-400">Tell me about your requirement</div>
+            </div>
+
+            <button onclick="closeEnquiryModal()"
+                    aria-label="Close enquiry form"
+                    class="w-10 h-10 rounded-full bg-white/10 hover:bg-neon hover:text-dark transition flex items-center justify-center">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+        </div>
+
+        <div class="overflow-y-auto bg-white" style="height:calc(94vh - 64px);">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfn6CHoQ14CD0fRsYW8QSiDWZ3LbIXkZPVi1pv_KJaqvKqc5A/viewform?embedded=true"
+                width="100%"
+                height="1200"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                loading="lazy"
+                title="Doman Sahu Enquiry Form"
+                style="display:block;border:0;">
+                Loading…
+            </iframe>
+        </div>
+
+    </div>
+</div>
+
 
 <footer class="border-t border-neon/10">
 <div class="max-w-7xl mx-auto px-5 sm:px-8 py-8">
@@ -475,6 +590,41 @@ window.addEventListener("scroll",()=>{
 const navbar=document.getElementById("navbar");
 if(window.scrollY>30) navbar.classList.add("bg-dark/90","shadow-lg");
 else navbar.classList.remove("bg-dark/90","shadow-lg");
+});
+</script>
+
+
+<script>
+function openEnquiryModal(context = 'General Project Enquiry') {
+    const modal = document.getElementById('enquiryModal');
+    const contextText = document.getElementById('enquiryContext');
+
+    if (contextText) {
+        contextText.textContent = context + ' • Fill the form below';
+    }
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeEnquiryModal() {
+    const modal = document.getElementById('enquiryModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('enquiryModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeEnquiryModal();
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeEnquiryModal();
+    }
 });
 </script>
 
