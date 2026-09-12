@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Doman Sahu | Website Developer & Business Automation Specialist</title>
-   <link rel="icon" type="image/png" href="logo.png">
 <meta name="description" content="Doman Sahu — Website Developer, Software Developer and Business Automation Specialist. Websites, web applications, dashboards and custom business automation solutions.">
 <meta name="theme-color" content="#07130c">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300,0,0" rel="stylesheet">
@@ -51,6 +52,7 @@ body{background:#07130c}
 .tech{padding:12px 18px;border:1px solid rgba(57,255,136,.12);border-radius:999px;color:#9ca3af;background:rgba(11,29,18,.4);transition:all .3s ease}.tech:hover{color:#39ff88;border-color:rgba(57,255,136,.5);transform:translateY(-4px);background:rgba(57,255,136,.05)}
 .mobile-link{padding:10px 12px;color:#9ca3af;transition:.3s}.mobile-link:hover{color:#39ff88}
 .price-card{transition:all .35s ease}.price-card:hover{transform:translateY(-8px);border-color:rgba(57,255,136,.45);box-shadow:0 20px 60px rgba(57,255,136,.07)}
+.faq-item{transition:all .3s ease}.faq-item:hover{border-color:rgba(57,255,136,.28)}.faq-item summary::-webkit-details-marker{display:none}.faq-item[open] .faq-icon{transform:rotate(45deg)}
 /* Google Form */
 @media(max-width:640px){#contact iframe{height:1100px}}
 
@@ -92,27 +94,20 @@ body{background:#07130c}
 <div class="max-w-7xl mx-auto px-5 sm:px-8">
 <div class="h-20 flex items-center justify-between">
 <a href="#home" class="flex items-center gap-3 group">
-    <img
-        src="logo.png"
-        alt="Doman Sahu"
-        class="w-11 h-11 object-contain transition-all duration-300 group-hover:scale-110"
-    >
-
-    <div class="leading-none">
-        <div class="font-display text-xl font-bold tracking-tight">
-            Doman<span class="text-neon">.</span>
-        </div>
-        <div class="text-[9px] uppercase tracking-[0.2em] text-gray-500 mt-1">
-            Digital Solutions
-        </div>
-    </div>
+<img src="logo.png" alt="Doman Sahu Logo" class="w-10 h-10 sm:w-11 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-110">
+<div class="leading-none">
+<div class="font-display text-xl font-bold tracking-tight">Doman<span class="text-neon">.</span></div>
+<div class="text-[8px] uppercase tracking-[.22em] text-gray-500 mt-1">Digital Solutions</div>
+</div>
 </a>
+
 <nav class="hidden md:flex items-center gap-7 text-sm">
 <a href="#services" class="text-gray-400 hover:text-neon transition">Services</a>
 <a href="#pricing" class="text-gray-400 hover:text-neon transition">Pricing</a>
 <a href="#about" class="text-gray-400 hover:text-neon transition">About</a>
 <a href="#projects" class="text-gray-400 hover:text-neon transition">Projects</a>
 <a href="#process" class="text-gray-400 hover:text-neon transition">Process</a>
+<a href="#faq" class="text-gray-400 hover:text-neon transition">FAQ</a>
 <a href="#contact" class="px-5 py-2.5 rounded-full border border-neon/50 text-neon hover:bg-neon hover:text-dark transition">Let's Talk</a>
 </nav>
 
@@ -126,6 +121,7 @@ body{background:#07130c}
 <a href="#about" class="mobile-link">About</a>
 <a href="#projects" class="mobile-link">Projects</a>
 <a href="#process" class="mobile-link">Process</a>
+<a href="#faq" class="mobile-link">FAQ</a>
 <a href="#contact" class="mobile-link text-neon">Let's Talk →</a>
 </div>
 </div>
@@ -298,7 +294,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Responsive website</li><li>✓ Up to 5 pages</li><li>✓ Contact / WhatsApp CTA</li><li>✓ Basic SEO setup</li><li>✓ Mobile optimized</li>
 </ul>
-<button onclick="openEnquiryModal(\'Starter Website\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Get Started</button>
+<button onclick="openEnquiryModal('Starter Website')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Get Started</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal relative overflow-hidden">
@@ -310,7 +306,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Premium responsive design</li><li>✓ Up to 10 pages</li><li>✓ Lead generation sections</li><li>✓ WhatsApp integration</li><li>✓ SEO & performance setup</li>
 </ul>
-<button onclick="openEnquiryModal(\'Business Website\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl bg-neon text-dark font-semibold hover:shadow-[0_10px_40px_rgba(57,255,136,.2)] transition">Choose Business</button>
+<button onclick="openEnquiryModal('Business Website')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl bg-neon text-dark font-semibold hover:shadow-[0_10px_40px_rgba(57,255,136,.2)] transition">Choose Business</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -321,7 +317,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Workflow analysis</li><li>✓ Google Sheets / Apps Script</li><li>✓ API integration</li><li>✓ Automated reports</li><li>✓ Notifications / WhatsApp</li>
 </ul>
-<button onclick="openEnquiryModal(\'Business Automation\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Automation</button>
+<button onclick="openEnquiryModal('Business Automation')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Automation</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -332,7 +328,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Custom UI / UX</li><li>✓ User management</li><li>✓ Database integration</li><li>✓ Admin dashboard</li><li>✓ API / third-party integration</li>
 </ul>
-<button onclick="openEnquiryModal(\'Custom Web Application\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</button>
+<button onclick="openEnquiryModal('Custom Web Application')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -343,7 +339,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Requirement analysis</li><li>✓ Custom modules</li><li>✓ Database architecture</li><li>✓ Reports & dashboards</li><li>✓ Deployment & support</li>
 </ul>
-<button onclick="openEnquiryModal(\'ERP / Business Software\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Your System</button>
+<button onclick="openEnquiryModal('ERP / Business Software')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Discuss Your System</button>
 </div>
 
 <div class="price-card glass rounded-3xl p-7 reveal">
@@ -354,7 +350,7 @@ I build modern websites, web applications and business automation systems that h
 <ul class="mt-6 space-y-3 text-sm text-gray-400">
 <li>✓ Android application</li><li>✓ Flutter / Kotlin</li><li>✓ Backend integration</li><li>✓ API connectivity</li><li>✓ Deployment support</li>
 </ul>
-<button onclick="openEnquiryModal(\'Custom Web Application\')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</button>
+<button onclick="openEnquiryModal('Custom Web Application')"  class="mt-7 inline-flex w-full justify-center py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition">Request Quote</button>
 </div>
 
 </div>
@@ -430,6 +426,109 @@ I build modern websites, web applications and business automation systems that h
 </div>
 <div class="mt-10 flex flex-wrap gap-3 reveal">
 <span class="tech">HTML</span><span class="tech">CSS</span><span class="tech">JavaScript</span><span class="tech">React.js</span><span class="tech">Java</span><span class="tech">Spring Boot</span><span class="tech">MySQL</span><span class="tech">Kotlin</span><span class="tech">Flutter</span><span class="tech">Google Apps Script</span><span class="tech">REST API</span><span class="tech">Git</span><span class="tech">GitHub</span><span class="tech">AI Integration</span>
+</div>
+</div>
+</section>
+
+<section id="faq" class="py-28">
+<div class="max-w-5xl mx-auto px-5 sm:px-8">
+<div class="max-w-3xl reveal">
+<div class="text-neon uppercase tracking-[.3em] text-xs font-semibold">FAQ</div>
+<h2 class="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-bold">Questions, <span class="gradient-text">answered.</span></h2>
+<p class="mt-6 text-gray-400 leading-8">Everything you need to know about websites, automation, apps, pricing and working with Doman Sahu. Still unsure? <a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" class="text-neon hover:underline">WhatsApp me</a>.</p>
+</div>
+
+<div class="mt-12 space-y-3">
+
+<details class="faq-item glass rounded-2xl reveal group" open>
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg">
+<span>How fast do you deliver?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span>
+</summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Most business websites take <strong class="text-white">1–2 weeks</strong>, depending on scope. Business automation projects typically take <strong class="text-white">3–7 days</strong>, while custom web applications and mobile apps may take <strong class="text-white">3–8 weeks</strong>. You will receive an estimated timeline before development starts.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>How much does a website cost?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Website development starts from <strong class="text-white">₹8,000</strong> for a starter website. Business websites start from <strong class="text-white">₹15,000</strong>, while custom web applications start from <strong class="text-white">₹30,000+</strong>. The final quotation depends on your requirements and features.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Do you offer payment in installments?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. For most projects, payment can be structured around <strong class="text-white">project milestones</strong>, such as an initial advance and the remaining amount after agreed development milestones or delivery.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>What happens after my website is launched?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">You will receive the completed website and deployment support. <strong class="text-white">Post-launch support and maintenance</strong> can also be provided depending on your requirements.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Do you work with clients outside Raipur?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7"><strong class="text-white">Absolutely.</strong> I work with businesses across India. Projects can be managed remotely through WhatsApp, email, Google Meet, Zoom and other online communication.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>What services do you provide?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">My main services include <strong class="text-white">website development, business automation, MIS and dashboards, custom web applications, ERP/business software, Android/mobile applications, API integrations, AI-powered solutions, and WhatsApp/email automation.</strong></div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Do you build websites with admin panels?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. Depending on the project, I can develop websites with <strong class="text-white">admin panels/CMS functionality</strong> so you can manage content, products, enquiries, users or business data without changing the website code.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>What is business automation?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Business automation uses software, APIs, Google Sheets, databases, WhatsApp, email and AI to reduce repetitive manual work. For example: <strong class="text-white">Customer Enquiry → Automatic Notification → Google Sheet → Follow-up → Dashboard/Report.</strong></div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Can you automate my existing business process?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. You do not necessarily need to replace your entire system. I can understand your existing workflow first and identify which parts can be automated or improved.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Do you provide WhatsApp automation?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. WhatsApp can be integrated into business workflows for <strong class="text-white">lead capture, notifications, customer communication and follow-ups</strong>. The exact setup and third-party/API charges depend on the requirement.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Can you connect my website with Google Sheets?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. Websites and web applications can be integrated with <strong class="text-white">Google Sheets</strong> for lead collection, enquiry management, reports and other business workflows where appropriate.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Do you develop Android and mobile apps?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. Android/mobile applications can be developed according to your business requirements. Cost and timeline depend on features, backend requirements and integrations.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Can you develop ERP or business software?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. Custom ERP/business software can be developed for processes such as <strong class="text-white">inventory, sales, purchase, customer management, reporting, staff workflows and dashboards</strong>. These projects are quoted after understanding the requirements.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>Do you provide maintenance after development?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Yes. Ongoing maintenance and support can be arranged for websites, applications and automation systems, including bug fixes, updates, monitoring and feature changes depending on the support plan.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl p-0 reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>I don't know exactly what I need. Can you help?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7"><strong class="text-white">Absolutely.</strong> You don't need a technical specification to get started. Tell me about your business and the problem you are trying to solve. I'll suggest a practical solution and explain the expected cost and timeline.</div>
+</details>
+
+<details class="faq-item glass rounded-2xl reveal">
+<summary class="list-none cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-5 font-display font-semibold text-base sm:text-lg"><span>How do I get started?</span><span class="faq-icon material-symbols-outlined text-neon transition-transform duration-300">add</span></summary>
+<div class="px-5 sm:px-6 pb-6 text-gray-400 leading-7">Click <strong class="text-white">Get Quote</strong> or <strong class="text-white">Start Your Project</strong>, fill in the enquiry form, and share your requirement. I'll review it and get back to you to discuss the next steps.</div>
+</details>
+
+</div>
+
+<div class="mt-10 text-center reveal">
+<p class="text-gray-500 mb-4">Still have questions?</p>
+<a href="https://wa.me/918827462871?text=Hello%20Doman%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-neon/30 text-neon hover:bg-neon hover:text-dark transition font-semibold">
+<span class="material-symbols-outlined text-xl">chat</span> WhatsApp Me
+</a>
 </div>
 </div>
 </section>
